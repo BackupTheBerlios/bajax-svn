@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>BAJAX - Easy Ajax Library</title>
+</head>
+<body>
+<pre>
+<h1>BAJAX - Easy Ajax Library</h1>
+<em><b>** Licensed under the BSD license **</b></em><br />
+Esse é um objeto ajax para ser usado independente de linguagem serverside.
+
+Criada por Tiago Bastos:
+	http://geekando.blogspot.com
+	comechao @  g m a i l DOT c o m
+
+Usando código baseado no trabalho de Thomas Lackner e ModernMethod (SAJAX).
+	Copyright:
+	Contributed and copyighted by Thomas Lackner and ModernMethod
+	(http://www.modernmethod.com/sajax/).
+	
+#DOC:
+	#Funções:
+	<b>
+	execute(requestPage,requestName,outputFunction,*Arguments)//*pode ser um array vazio
+	include(ElmentId,requestPage)
+	insertHTML(id,hmtl)
+	getHTML(id)
+	</b>
+	#Variáveis:
+	
+	bajax_debug_mode : false,//Selecione p/ debug
+	bajax_request_type : "GET", //Métodos: GET ou POST
+		
+	#Chamadas a página com ou sem argumentos
+	Fazer a chamada, Argumentos:
+	EXEMPLO usando GET
+ 		No arquivo JS:		
+			//Array dos argumentos
+			var myargs = new Array()
+			myargs['aum'] = "1";
+			myargs['adois'] = "2";
+			
+			//Receberá o retorno
+			function exemplo(x){
+				alert(x);
+			}
+			bajax.uri = 'soma.php';
+			bajax.execute('soma',exemplo,myargs);
+			bajax.execute('subtracao',exemplo,myargs);
+		#A url sairia assim no 1º caso: soma.php?rname=soma&aum=1&adois=2
+	#include
+		bajax.include('listagem','myarq.jsp');
+		#Incluiria o arquivo myarq.jsp em um elemento (DOM) na página
+
+#TODO:
+.Colocar declarado na função a URL para requests.
+.Dar suporte a execução sem função para output no execute.(quiet mode?)
+.Adicionar suporte a event handlers.
+.Colocar mais funções para facilitar a vida.
+.DOminar o mundo!
+</pre>
+</body>
+</html>
