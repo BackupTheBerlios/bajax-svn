@@ -1,4 +1,5 @@
 README
+BAJAX 0.9
 Bajax é um objeto ajax para ser usado independente de linguagem serverside.
 
 Criada por Tiago Bastos:
@@ -36,9 +37,8 @@ Usando código baseado no trabalho de Thomas Lackner e ModernMethod (SAJAX).
 			function exemplo(x){
 				alert(x);
 			}
-			bajax.uri = 'soma.php';
-			bajax.execute('soma',exemplo,myargs);
-			bajax.execute('subtracao',exemplo,myargs);
+			bajax.execute('soma.php','soma',exemplo,myargs);
+			bajax.execute('soma.php','subtracao',exemplo,myargs);
 
 		A url sairia assim no 1º caso: soma.php?rname=soma&aum=1&adois=2
 	#include
