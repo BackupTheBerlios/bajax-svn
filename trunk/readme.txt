@@ -1,14 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>BAJAX - Easy Ajax Library</title>
-</head>
-<body>
-<pre>
-<h1>BAJAX - Easy Ajax Library</h1>
-<em><b>** Licensed under the BSD license **</b></em><br />
-Esse é um objeto ajax para ser usado independente de linguagem serverside.
+README
+Bajax é um objeto ajax para ser usado independente de linguagem serverside.
 
 Criada por Tiago Bastos:
 	http://geekando.blogspot.com
@@ -21,16 +12,16 @@ Usando código baseado no trabalho de Thomas Lackner e ModernMethod (SAJAX).
 	
 #DOC:
 	#Funções:
-	<b>
+
 	execute(requestPage,requestName,outputFunction,*Arguments)//*pode ser um array vazio
 	include(ElmentId,requestPage)
 	insertHTML(id,hmtl)
 	getHTML(id)
-	</b>
-	#Variáveis:
+
+	#Variá¡veis:
 	
 	bajax_debug_mode : false,//Selecione p/ debug
-	bajax_request_type : "GET", //Métodos: GET ou POST
+	bajax_request_type : "GET", //MÃ©todos: GET ou POST
 		
 	#Chamadas a página com ou sem argumentos
 	Fazer a chamada, Argumentos:
@@ -41,24 +32,21 @@ Usando código baseado no trabalho de Thomas Lackner e ModernMethod (SAJAX).
 			myargs['aum'] = "1";
 			myargs['adois'] = "2";
 			
-			//Receberá o retorno
+			//Receber o retorno
 			function exemplo(x){
 				alert(x);
 			}
 			bajax.uri = 'soma.php';
 			bajax.execute('soma',exemplo,myargs);
 			bajax.execute('subtracao',exemplo,myargs);
-		#A url sairia assim no 1º caso: soma.php?rname=soma&aum=1&adois=2
+
+		A url sairia assim no 1º caso: soma.php?rname=soma&aum=1&adois=2
 	#include
 		bajax.include('listagem','myarq.jsp');
-		#Incluiria o arquivo myarq.jsp em um elemento (DOM) na página
-
-#TODO:
-.Colocar declarado na função a URL para requests.
-.Dar suporte a execução sem função para output no execute.(quiet mode?)
-.Adicionar suporte a event handlers.
-.Colocar mais funções para facilitar a vida.
-.DOminar o mundo!
-</pre>
-</body>
-</html>
+	Incluiria o arquivo myarq.jsp em um elemento (DOM) na página
+	#insertHTML
+		bajax.insertHTML('teste','<b>Hello World</b>')
+	Insere HTML no elemento com id=teste
+	#getHTML
+		bajax.insertHTML('teste')
+	Pega o conteúdo dentro do elemento com id=teste
