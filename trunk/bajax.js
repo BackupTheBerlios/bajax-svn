@@ -1,6 +1,6 @@
 /*
 BAJAX 
-
+bajax.berlios.de
 
 Copyright (c) 2006, Tiago Bastos da Silva
 All rights reserved.
@@ -15,11 +15,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 var bajax = {
 	bajax_debug_mode : false,//Debug flag
-	bajax_request_type : "GET", //Métodos: GET ou POST
-	uri : "std.php", //Selecione a url a qual você deseja chamar (bajax.uri = 'myurl')
+	bajax_request_type : "GET", //GET or POST
+	uri : "std.php",
 	
 	/*
-	Método para debug
 	Debug method
 	*/
 	debug: function (text) {
@@ -27,7 +26,6 @@ var bajax = {
 			alert("DEBUG: " + text)
 	},
 	/*
-	Criar Objeto XMLHttpRequest
 	Criate XMLHttpRequest object
 	*/
 	init: function () {
@@ -50,7 +48,6 @@ var bajax = {
 		return A;
 	},
 	/*
-	Simula o include de limguagens como o PHP
 	Simulate include function ( like PHP )
 	*/
 	include: function(nome,url){
@@ -114,7 +111,6 @@ var bajax = {
 		delete x;
 	},
 	/*
-	Aliases para document.getElementById(id).innerHTML
 	Aliases for document.getElementById(id).innerHTML
 	*/
 	insertHTML : function(id,content){
