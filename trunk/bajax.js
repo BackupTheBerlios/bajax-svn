@@ -64,7 +64,6 @@ var bajax = {
 		A.send(null);	
 	},
 	/*
-	Faz a chamada e executa a funções
 	Make a call to execute the function
 	*/
 	execute: function (page ,func_name, func_js ,args) {
